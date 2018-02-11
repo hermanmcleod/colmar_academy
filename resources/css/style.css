@@ -1,0 +1,145 @@
+/* colors: 	rich black - 040303, 
+			arsenic - 3A4E48, 
+			smoke - 6A7B76, 
+			artichoke - 8B9D83, 
+			black-shadows - BEB0A7;
+			*/
+html {
+	font-family: 'Roboto', sans-serif;
+}
+
+body {
+	color: #040303;
+}
+
+header {
+	background-color: #8B9D83;
+	height: 64px;
+}
+
+nav ul {
+	display: flex;
+	flex-direction: row;
+	list-style-type: none;
+
+}
+
+nav li {
+	margin: 8px;
+}
+
+nav a {
+	text-decoration: none;
+	color: inherit;
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+
+#brand {
+	display: flex;
+	flex-direction: row;
+	height: 64px;
+}
+
+#logo {
+	height: 32px;
+	margin-top: 16px;
+	margin-bottom: 16px;
+}
+
+.container {
+	margin-right: 24px;
+	margin-left: 24px;
+}
+
+header .container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.title {
+	align-self: center;
+}
+
+.title h2 {
+	font-weight: bold;
+}
+
+#banner {
+	background-color: #BEB0A7;
+}
+
+.left img {
+	width: 60%;
+	margin: 32px 24px;
+	border-radius: 50px;
+}
+
+.container img {
+	height: 60%;
+}
+
+
+#academy {
+	color: #6A7B76;
+}
+
+#banner .container {
+	display: flex;
+	flex-direction: row;
+}
+
+#banner .container .text {
+	align-self: center;
+}
+
+#banner .right .button	{
+	background-color: #3A4E48;
+	padding: 8px;
+	display: flex;
+	justify-content: center;
+	width: 80%;
+}
+
+#banner h1 {
+	font-size: 48px;
+	font-weight: bolder;
+}
+
+#banner h4 {
+	font-size: 32px;
+}
+
+#banner p {
+	font-size: 24px;
+	color: #BEB0A7;
+}
+
+.right {
+	width: 40%;
+}
+
+#banner a {
+	text-decoration: none;
+}
+
+
+#banner .right .button:hover {
+	background-color: #8B9D83;
+}
+
+#infotext {
+	width: 60%;
+}
+
+#information {
+	display: flex;
+	flex-direction: row;
+}
+
+/*
+#button_back:hover {
+	height: 100%;
+	background-color: #3A4E48;
+}
+*/
