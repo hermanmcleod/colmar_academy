@@ -4,6 +4,13 @@
 			artichoke - 8B9D83, 
 			black-shadows - BEB0A7;
 			*/
+
+
+/* Make nav bar fixed, add buttons: change backround on hover. add active bg change. add transitions. add accessability stuff.
+why is logo and nav bar no longer aligned with container. figure out why the banner photo and the information photo are different sizes
+margins for the bottom two titles are wrong, and below the details and the sizing of photos in other browswers is off.CHECK EVERYTHING
+BEFORE SUBMITTING*/
+
 html {
 	font-family: 'Roboto', sans-serif;
 }
@@ -15,6 +22,11 @@ body {
 header {
 	background-color: #8B9D83;
 	height: 64px;
+}
+
+header .container {
+	margin-left: 24px;
+	margin-right: 24px;
 }
 
 nav ul {
@@ -52,11 +64,11 @@ header .container {
 	justify-content: space-between;
 }
 
-.title {
+#brand .title {
 	align-self: center;
 }
 
-.title h2 {
+#brand .title h2 {
 	font-weight: bold;
 }
 
@@ -68,6 +80,7 @@ header .container {
 
 .left img {
 	border-radius: 50px;
+	width: 100%;
 } 
 
 #academy {
@@ -83,10 +96,16 @@ header .container {
 	padding: 8px;
 	display: flex;
 	justify-content: center;
+	border-radius: 16px;
+	width: 80%;
+	margin-left: 48px;
 }
 
 #banner .right .button:hover {
 	background-color: #8B9D83;
+	border-radius: 16px;
+	width: 80%;
+	margin-left: 48px;
 
 }
 
@@ -128,15 +147,12 @@ header .container {
 	margin: 32px 24px;
 }
 
-.left img {
-	width: 100%;
-}
-
 .container.right  {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	margin: 32px 24px;
+	width: 40%;
 }
 
 #information .right {
@@ -147,6 +163,12 @@ header .container {
 #information .right .details {
 	display: flex;
 	flex-direction: row;
+	border: 1px solid #6A7B76;
+	border-radius: 16px;
+}
+
+#information .right .details:hover {
+	background-color: #6A7B76
 }
 
 #information .right .details img {
@@ -160,3 +182,56 @@ header .container {
 	display: flex;
 	flex-direction: column;
 }
+
+#course {
+	background-color: #BEB0A7;
+}
+
+#course .title {
+	display: flex;
+	justify-content: center;
+	padding: 32px;
+	min-width: 100%;
+}
+
+#course .details {
+	width: 25%;
+	margin: 32px;
+	background-color: white;
+	border-radius: 16px;
+	border: 2px solid white;
+}
+
+#course .details img {
+	width: 100%;
+	height: auto;
+	border: 1px solid white;
+	border-radius: 16px;	
+}
+
+#course .container {
+	margin: 72px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#course .text {
+	background-color: #fff;
+	border: 2px solid white;
+	height: 160px;
+	border-radius: 16px;
+	padding: 16px;
+	text-align: center;
+	margin-left: 36px;
+	margin-right: 36px;
+}
+
+#thesis {
+	height: 800px;
+}
+
+#thesis .title {
+	display: flex;
+	justify-content: center;
+	min-width: 100%;
+	border: 1px solid blue;
