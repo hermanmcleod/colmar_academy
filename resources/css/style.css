@@ -67,16 +67,17 @@ header .container {
 
 #banner {
 	background-color: #BEB0A7;
+	display: flex;
+	flex-direction: row;
 }
 
 .left img {
-	width: 60%;
-	margin: 32px 24px;
 	border-radius: 50px;
-}
-
+} 
+/
 .container img {
 	height: 60%;
+	border: 5px solid blue;
 }
 
 
@@ -84,30 +85,35 @@ header .container {
 	color: #6A7B76;
 }
 
-#banner .container {
-	display: flex;
-	flex-direction: row;
-}
-
 #banner .container .text {
 	align-self: center;
-}
+} 
 
 #banner .right .button	{
 	background-color: #3A4E48;
 	padding: 8px;
 	display: flex;
 	justify-content: center;
-	width: 80%;
+}
+
+#banner .right .button:hover {
+	background-color: #8B9D83;
+
+}
+
+#button_back:hover p { 
+	color: #040303;
 }
 
 #banner h1 {
 	font-size: 48px;
 	font-weight: bolder;
+	line-height: 1rem;
 }
 
 #banner h4 {
 	font-size: 32px;
+	line-height: .1rem;
 }
 
 #banner p {
@@ -115,21 +121,12 @@ header .container {
 	color: #BEB0A7;
 }
 
-.right {
-	width: 40%;
-}
-
 #banner a {
 	text-decoration: none;
 }
 
-
-#banner .right .button:hover {
-	background-color: #8B9D83;
-}
-
 #infotext {
-	width: 60%;
+	width: 100%;
 }
 
 #information {
@@ -137,9 +134,28 @@ header .container {
 	flex-direction: row;
 }
 
-/*
-#button_back:hover {
-	height: 100%;
-	background-color: #3A4E48;
+.container.left {
+	width: 60%;
+	margin: 32px 24px;
 }
-*/
+
+.left img {
+	width: 100%;
+}
+
+.container.right  {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#information .right {
+	display: flex;
+	flex-direction: column;
+}
+
+#information .right .details {
+	display: flex;
+	flex-direction: row;
+	border: 2px solid green;
+}
