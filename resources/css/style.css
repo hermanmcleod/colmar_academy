@@ -6,10 +6,10 @@
 			*/
 
 
-/* Make nav bar fixed, add buttons: change backround on hover. add active bg change. add transitions. add accessability stuff.
-why is logo and nav bar no longer aligned with container. figure out why the banner photo and the information photo are different sizes
-margins for the bottom two titles are wrong, and below the details and the sizing of photos in other browswers is off.CHECK EVERYTHING
-BEFORE SUBMITTING*/
+/*   add active bg change. add transitions. add accessability stuff.
+remove information notes and other notes.
+reposition thesis details so not centered
+CHECK EVERYTHING BEFORE SUBMITTING*/
 
 html {
 	font-family: 'Roboto', sans-serif;
@@ -17,23 +17,32 @@ html {
 
 body {
 	color: #040303;
+	margin-top: 64px;
+	width: 100%;
+	margin-left: 0px;
 }
 
 header {
 	background-color: #8B9D83;
 	height: 64px;
+	left: 0px;
+	top: 0px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    padding-bottom: 4px;
 }
 
 header .container {
 	margin-left: 24px;
 	margin-right: 24px;
+
 }
 
 nav ul {
 	display: flex;
 	flex-direction: row;
 	list-style-type: none;
-
 }
 
 nav li {
@@ -45,6 +54,18 @@ nav a {
 	color: inherit;
 	font-size: 1.2rem;
 	font-weight: bold;
+	background-color: #8B9D83;
+	border-radius: 16px;
+	padding: 16px;
+}
+
+nav a:hover {
+	padding: 16px;
+	border-radius: 16px;
+	background-color: #3A4E48;
+	color: #BEB0A7;
+	transition: color 1s linear;
+	transition: background-color 1s linear;
 }
 
 #brand {
@@ -92,8 +113,8 @@ header .container {
 } 
 
 #banner .right .button	{
-	background-color: #3A4E48;
-	padding: 8px;
+	background-color: #8B9D83;
+	padding: 8px; 
 	display: flex;
 	justify-content: center;
 	border-radius: 16px;
@@ -102,15 +123,17 @@ header .container {
 }
 
 #banner .right .button:hover {
-	background-color: #8B9D83;
+	background-color: #3A4E48;
 	border-radius: 16px;
 	width: 80%;
 	margin-left: 48px;
+	transition: background-color .5s linear;
 
 }
 
 #button_back:hover p { 
-	color: #040303;
+	color: #BEB0A7;
+	transition: color .5s linear;
 }
 
 #banner h1 {
@@ -126,14 +149,14 @@ header .container {
 
 #banner p {
 	font-size: 24px;
-	color: #BEB0A7;
+	color: #040303;
 }
 
 #banner a {
 	text-decoration: none;
 }
 
-#infotext {
+.infotext {
 	width: 100%;
 }
 
@@ -150,37 +173,42 @@ header .container {
 .container.right  {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: center; 
 	margin: 32px 24px;
 	width: 40%;
+	align-content: center;
+} 
+
+.container .right .text {
+	align-self: center;
 }
 
-#information .right {
+/*#information*/ .right {
 	display: flex;
 	flex-direction: column;
 }
 
-#information .right .details {
+/*#information*/ .right .details {
 	display: flex;
 	flex-direction: row;
 	border: 1px solid #6A7B76;
 	border-radius: 16px;
+	height: 200px;
 }
 
-#information .right .details:hover {
-	background-color: #6A7B76
+/*#information*/ .right .details:hover {
+	background-color: #6A7B76;
+	transition: background-color 1s linear;
 }
 
-#information .right .details img {
+/*#information*/ .right .details img {
 	width: 35%;
-	height: 35%;
+	height: auto;
 	border-radius: 16px;
 	margin: 16px;
 }
 
-#information .details .text {
-	display: flex;
-	flex-direction: column;
+#information .details .text p {
 }
 
 #course {
@@ -210,9 +238,10 @@ header .container {
 }
 
 #course .container {
-	margin: 72px;
+	margin-left: 72px;
+	margin-right: 72px;
 	display: flex;
-	flex-wrap: wrap;
+	flex-wrap: wrap; 
 }
 
 #course .text {
@@ -221,9 +250,13 @@ header .container {
 	height: 160px;
 	border-radius: 16px;
 	padding: 16px;
-	text-align: center;
+	line-height: 1rem;
 	margin-left: 36px;
 	margin-right: 36px;
+}
+
+#course .text h4 {
+	line-height: .05rem;
 }
 
 #thesis {
@@ -234,4 +267,94 @@ header .container {
 	display: flex;
 	justify-content: center;
 	min-width: 100%;
-	border: 1px solid blue;
+	padding: 32px;
+}
+
+#thesis .main {
+	display: flex;
+	flex-direction: row;
+}
+
+#thesis .container .left {
+	margin-left: 24px;
+	margin-right: 24px;
+	width: 60%;
+}
+
+#thesis .right {
+
+}
+
+footer .container {
+	margin-left: 24px;
+	margin-right: 24px;
+	margin-top: 16px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+footer a {
+	text-decoration: none;
+	color: #040303;
+	margin: 8px;
+}
+
+footer {
+	background-color: #8B9D83;
+}
+
+i {
+	align-self: center;
+	color: #fff;
+}
+
+footer span, p {
+	align-self: center;
+}
+
+#facebook {
+	display: flex;
+	justify-content: center;
+	height: 40px;
+	width: 40px;
+	background-color: #3B5998;
+	margin-left: 4px;
+}
+
+#facebook:hover {
+	border-radius: 40px;
+	transition: border-radius 0.5s ease-out;
+}
+
+#twitter {
+	display: flex;
+	justify-content: center;
+	height: 40px;
+	width: 40px;
+	background-color: #00aced;
+	margin-left: 4px;
+}
+
+#twitter:hover {
+	border-radius: 40px;
+	transition: border-radius 0.5s ease-out;
+}
+
+.square a {
+	align-self: center;
+}
+
+#social {
+	display: flex;
+	flex-direction: row;
+}
+
+.mobile {
+	display: none;
+}
+
+@media only screen and (max-width: 480px) {
+
+
+}
