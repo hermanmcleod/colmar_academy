@@ -288,7 +288,7 @@ header .container {
 }
 
 #thesis .right {
-
+	display: block;
 }
 
 footer .container {
