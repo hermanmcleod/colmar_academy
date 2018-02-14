@@ -6,7 +6,7 @@
 			*/
 
 
-/*   add active bg change. add transitions. add accessability stuff.
+/*   add accessability stuff.
 remove information notes and other notes.
 reposition thesis details so not centered
 CHECK EVERYTHING BEFORE SUBMITTING*/
@@ -230,6 +230,11 @@ header .container {
 	border: 2px solid white;
 }
 
+#course .details:hover {
+	width: 26%;
+	transition: width .3s linear;
+}
+
 #course .details img {
 	width: 100%;
 	height: auto;
@@ -242,6 +247,7 @@ header .container {
 	margin-right: 72px;
 	display: flex;
 	flex-wrap: wrap; 
+	justify-content: center;
 }
 
 #course .text {
