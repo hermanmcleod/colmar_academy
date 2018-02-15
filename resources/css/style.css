@@ -9,6 +9,8 @@
 /*   add accessability stuff.
 remove information notes and other notes.
 reposition thesis details so not centered
+fix the messed up text when shrinking the screen
+make course area links
 CHECK EVERYTHING BEFORE SUBMITTING*/
 
 html {
@@ -49,7 +51,7 @@ nav li {
 	margin: 8px;
 }
 
-nav a {
+nav ul a {
 	text-decoration: none;
 	color: inherit;
 	font-size: 1.2rem;
@@ -59,7 +61,7 @@ nav a {
 	padding: 16px;
 }
 
-nav a:hover {
+nav ul a:hover {
 	padding: 16px;
 	border-radius: 16px;
 	background-color: #3A4E48;
@@ -193,7 +195,7 @@ header .container {
 	flex-direction: row;
 	border: 1px solid #6A7B76;
 	border-radius: 16px;
-	height: 200px;
+	height: auto;
 }
 
 /*#information*/ .right .details:hover {
@@ -202,13 +204,19 @@ header .container {
 }
 
 /*#information*/ .right .details img {
-	width: 35%;
+	width: 100%;
 	height: auto;
 	border-radius: 16px;
+	
+}
+
+/* #information */ .container .details .desktop {
+	width: 35%;
 	margin: 16px;
 }
 
-#information .details .text p {
+/* #information */ .details .text {
+	width: 65%;
 }
 
 #course {
@@ -300,6 +308,15 @@ footer .container {
 	justify-content: space-between;
 }
 
+footer .links {
+	margin-left: 24px;
+	margin-right: 24px;
+	margin-top: 16px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
 footer a {
 	text-decoration: none;
 	color: #040303;
@@ -360,7 +377,116 @@ footer span, p {
 	display: none;
 }
 
-@media only screen and (max-width: 480px) {
 
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+
+	#information .container .details .desktop {
+		display: none;
+	}
+
+	#information .container .details .mobile {
+		display: flex;
+		margin: 16px;
+	}
+
+	#information .container .details  {
+		flex-direction: column;
+		width: 570px;
+		margin-left: 72px;
+	}
+
+	#information .text {
+		display: block;	
+		text-align: center;
+		align-self: center;
+	}
+
+	#information .container {
+
+	}
+
+	#information .container.right {
+		width: 700px;
+		display: flex;
+		justify-content: center;
+	}
+
+	nav .mobile {
+		display: flex;
+		margin-top: 16px;
+		margin-bottom: 16px;
+	}
+
+	nav a {
+		margin-left: 16px;
+		background: none;
+		border: none;
+	}
+
+	nav ul {
+		display: none;
+	}
+
+	.title {
+		display: none;
+	}
+
+	header .container {
+		justify-content: center;
+	}
+
+	#banner {
+		flex-direction: column;
+		justify-content: center;
+		width: 768px;
+	}
+
+	#banner .left {
+		width: 700px;
+	}
+
+	#banner .right {
+		width: 700px;
+	}
+
+	#information .container.left {
+		display: none;
+	}
+
+	#course img {
+		display: none;
+	}
+
+	#course .details {
+		background: none;
+		border: none;
+	}
+
+	#course p {
+		display: none;
+	}
+
+	#course .container {
+		display: flex;
+		flex-wrap: nowrap;
+		flex-direction: column;
+	}
+
+	#course .container .text {
+		width: 500px;
+		height: 200px;
+	}
+
+	#thesis .right.container {
+		display: none;
+	}
+
+	#thesis .infotext {
+		display: none;
+	}
+
+	footer .links {
+		display: none;
+	}
 
 }
