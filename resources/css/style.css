@@ -6,15 +6,6 @@
 			*/
 
 
-/*   add accessability stuff.
-remove information notes and other notes.
-make course area links - appropriate background color
-add accessibility
-correct margins
-create smaller mobile version
-change the read more links?
-CHECK EVERYTHING BEFORE SUBMITTING*/
-
 html {
 	font-family: 'Roboto', sans-serif;
 }
@@ -46,6 +37,7 @@ header .container {
 	margin-left: 24px;
 	margin-right: 24px;
 
+
 }
 
 nav ul {
@@ -55,7 +47,7 @@ nav ul {
 }
 
 nav li {
-	margin: 8px;
+	margin-top: 8px;
 }
 
 nav ul a {
@@ -147,13 +139,10 @@ header .container {
 
 #banner h1 {
 	font-size: 48px;
-	font-weight: bolder;
-	line-height: 1rem;
 }
 
 #banner h4 {
 	font-size: 32px;
-	line-height: .1rem;
 }
 
 #banner p {
@@ -188,12 +177,12 @@ header .container {
 	align-self: center;
 }
 
-/*#information*/ .right {
+.right {
 	display: flex;
 	flex-direction: column;
 }
 
-/*#information*/ .right .details {
+.right .details {
 	display: flex;
 	flex-direction: row;
 	border: 1px solid #6A7B76;
@@ -201,24 +190,23 @@ header .container {
 	height: auto;
 }
 
-/*#information*/ .right .details:hover {
+.right .details:hover {
 	background-color: #6A7B76;
 	transition: background-color 1s linear;
 }
 
-/*#information*/ .right .details img {
+.right .details img {
 	width: 100%;
 	height: auto;
 	border-radius: 16px;
-	
 }
 
-/* #information */ .container .details .desktop {
+.container .details .desktop {
 	width: 35%;
 	margin: 16px;
 }
 
-/* #information */ .details .text {
+.details .text {
 	width: 65%;
 }
 
@@ -238,7 +226,6 @@ header .container {
 	margin: 32px; 
 	background-color: white; 
 	border-radius: 16px;
-	
 	border: 2px solid white;
 }
 
@@ -250,9 +237,6 @@ header .container {
 #course a img {
 	width: 100%;
 	height: auto;
-	/*
-	border: 1px solid white;
-	*/
 	border-radius: 16px;	
 }
 
@@ -265,8 +249,6 @@ header .container {
 }
 
 #course .text {
-	/* background-color: #fff; 
-	border: 2px solid white; */
 	height: 160px;
 	border-radius: 16px;
 	padding: 16px;
@@ -385,7 +367,7 @@ footer span, p {
 }
 
 
-@media only screen and (min-width: 320px) and (max-width: 768px) {
+@media only screen and (min-width: 321px) and (max-width: 768px) {
 
 	#information .container .details .desktop {
 		display: none;
@@ -511,6 +493,169 @@ footer span, p {
 		display: flex;
 		justify-content: center;
 		margin-left: 72px;
+	}
+
+	footer .links {
+		display: none;
+	}
+
+	footer {
+		display: flex;
+		justify-content: center;
+	}
+
+}
+
+@media only screen and (max-width: 320px) {
+
+
+#information .container .details .desktop {
+		display: none;
+	}
+
+	#information .container .details .mobile {
+		display: flex;
+		margin: 16px;
+	}
+
+	#information .container .details  {
+		flex-direction: column;
+		width: 280px;
+		margin-left: 8px;
+	}
+
+	#information .text {
+		display: block;	
+		text-align: center;
+		align-self: center;
+	}
+
+	#information .container.right {
+		width: 700px;
+		display: flex;
+		justify-content: center;
+	}
+
+	nav .mobile {
+		display: flex;
+		margin-top: 16px;
+		margin-bottom: 16px;
+	}
+
+	nav a {
+		margin-left: 16px;
+		background: none;
+		border: none;
+	}
+
+	nav ul {
+		display: none;
+	}
+
+	.title {
+		display: none;
+	}
+
+	header .container {
+		justify-content: center;
+	}
+
+	#banner {
+		flex-direction: column;
+		justify-content: center;
+		width: 320px;
+	}
+
+	#banner .left {
+		width: 320px;
+	}
+
+	#banner .right {
+		width: 320px;
+	}
+
+	#banner img {
+		width: 280px;
+		height: auto;
+	}
+
+	#banner h1 {
+		font-size: 1.2rem;
+		font-style: bold;
+	}
+
+	#banner h4 {
+		font-size: .9rem;
+	}
+
+	#banner .right .button	{
+	margin-left: 8px;
+	margin-top: 16px;
+	}
+
+	#banner .right .button:hover {
+		margin-left: 8px;
+		margin-top: 16px;
+	}
+
+	#information .container.left {
+		display: none;
+	}
+
+	#course a {
+		background: none;
+		border: none;
+	}
+
+	#course img {
+		display: none;
+	}
+
+	#course .details {
+		background: none;
+		border: none;
+	}
+
+	#course p {
+		display: none;
+	}
+
+	#course .container {
+		display: flex;
+		flex-wrap: nowrap;
+		flex-direction: column;
+		margin: 1px;
+	}
+
+	#course .container .text {
+		
+		height: 50px;
+		background-color: #6A7B76;
+		text-align: center;
+		width: 280px;
+		margin: 5px;
+	}
+
+	#course h4 {
+	font-size: .9rem;
+	}
+
+	#thesis .right.container {
+		display: none;
+	}
+
+	#thesis .infotext {
+		display: none;
+	}
+
+	#thesis {
+		height: auto;
+	}
+
+	#thesis .main {
+		display: flex;
+		justify-content: center;
+		margin-left: 1px;
 	}
 
 	footer .links {
